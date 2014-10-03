@@ -28,6 +28,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				Log.e("tz", "开始游戏!");
+				Ring.ring(MainActivity.this);
 				Intent intent = new Intent(MainActivity.this, ConfigGame.class);
 				startActivity(intent);
 			}
@@ -40,6 +41,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				Log.e("tz", "查看规则");
+				Ring.ring(MainActivity.this);
 				Intent intent = new Intent(MainActivity.this, RulesGame.class);
 				startActivity(intent);
 			}

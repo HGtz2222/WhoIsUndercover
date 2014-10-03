@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/rules_game_title"
+        android:background="@color/ctrlbackground"
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:text="@string/rules_game_content"
+        android:background="@color/ctrlbackground"
+        android:textColor="@color/textColor"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_return_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/ctrlbackground"
+        android:gravity="center"
+        android:text="@string/return_main_menu"
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
+
+</LinearLayout>
