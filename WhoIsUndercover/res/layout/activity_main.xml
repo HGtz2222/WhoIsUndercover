@@ -12,7 +12,7 @@
     android:background="@color/background" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tv_wordScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/game_title"
@@ -30,8 +30,17 @@
         android:layout_weight="1" 
         android:textSize="30sp"
         android:textColor="@color/textColor"
-        android:background="@color/ctrlbackground" />
-
+        android:background="@drawable/selector" />
+    <Button
+        android:id="@+id/btn_space"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="0.05"
+        android:background="@color/background"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
     <Button
         android:id="@+id/btn_rules"
         android:layout_width="match_parent"
@@ -40,6 +49,6 @@
         android:layout_weight="1" 
         android:textSize="30sp"
         android:textColor="@color/textColor"
-        android:background="@color/ctrlbackground" />
+        android:background="@drawable/selector" />
 
 </LinearLayout>

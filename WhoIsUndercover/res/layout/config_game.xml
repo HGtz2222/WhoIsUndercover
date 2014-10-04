@@ -1,12 +1,14 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    tools:context=".ConfigGame" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tv_wordScreen"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0sp"
         android:layout_weight="1"
         android:background="@color/ctrlbackground"
         android:gravity="center"
@@ -22,36 +24,33 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/btn_minus"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_playerNumPrev"
+            android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/ctrlbackground"
+            android:background="@drawable/selector"
             android:text="@string/btn_minus"
             android:textColor="@color/textColor"
-            android:textSize="40sp"
-             />
+            android:textSize="40sp" />
 
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView_playerNum"
+            android:layout_width="0sp"
             android:layout_height="match_parent"
-            android:layout_weight="500"
+            android:layout_weight="3"
             android:background="@color/ctrlbackground"
-            android:ems="10"
             android:gravity="center"
-            android:inputType="number"
             android:text="@string/default_player_num"
             android:textColor="@color/textColor"
-            android:textSize="30sp"  >
-        </EditText>
+            android:textSize="30sp" >
+        </TextView>
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_playerNumNext"
+            android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/ctrlbackground"
+            android:background="@drawable/selector"
             android:text="@string/btn_plus"
             android:textColor="@color/textColor"
             android:textSize="40sp" />
@@ -60,7 +59,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0sp"
         android:layout_weight="1"
         android:background="@color/ctrlbackground"
         android:gravity="center"
@@ -75,33 +74,33 @@
         android:layout_weight="1" >
 
         <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_typePrev"
+            android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/ctrlbackground"
+            android:background="@drawable/selector"
             android:text="@string/btn_minus"
             android:textColor="@color/textColor"
             android:textSize="40sp" />
 
         <TextView
-            android:id="@+id/word_type_select"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="500"
+            android:id="@+id/textView_wordType"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
             android:background="@color/ctrlbackground"
             android:gravity="center"
+            android:text="@string/default_word_type"
             android:textColor="@color/textColor"
-            android:textSize="30sp"
-            android:text="@string/default_word_type" />
+            android:textSize="30sp" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_typeNext"
+            android:layout_width="0sp"
             android:layout_height="match_parent"
-            android:text="@string/btn_plus"
             android:layout_weight="1"
-            android:background="@color/ctrlbackground"
+            android:background="@drawable/selector"
+            android:text="@string/btn_plus"
             android:textColor="@color/textColor"
             android:textSize="40sp" />
     </TableRow>
@@ -109,7 +108,7 @@
     <Button
         android:id="@+id/btn_space"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0sp"
         android:layout_weight="1"
         android:background="@color/ctrlbackground"
         android:gravity="center"
@@ -118,14 +117,25 @@
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/btn_start_game_now"
+        android:id="@+id/btn_startGameNow"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="5"
-        android:background="@color/ctrlbackground"
+        android:layout_height="0sp"
+        android:layout_weight="3"
+        android:background="@drawable/selector"
         android:gravity="center"
         android:text="@string/start_game"
         android:textColor="@color/textColor"
         android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/btn_space2"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:background="@color/ctrlbackground"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
 
 </TableLayout>

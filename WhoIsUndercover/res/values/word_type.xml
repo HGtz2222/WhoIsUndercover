@@ -1,0 +1,9 @@
+
+    <resources>
+        <string-array name="word_type">
+            <item >不限</item>
+            <item >类别1</item>
+            <item >类别2</item>
+            <item >类别3</item>
+        </string-array>
+    </resources>

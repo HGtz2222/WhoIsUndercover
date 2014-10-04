@@ -24,6 +24,7 @@
         </activity>
         <activity android:name="com.tz.whoisundercover.RulesGame"></activity>
         <activity android:name="com.tz.whoisundercover.ConfigGame"></activity>
+        <activity android:name="com.tz.whoisundercover.InitId"></activity>
     </application>
 
 </manifest>

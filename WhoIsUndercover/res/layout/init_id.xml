@@ -6,32 +6,33 @@
     <TextView
         android:id="@+id/tv_wordScreen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/rules_game_title"
+        android:layout_height="0dp"
+        android:layout_weight="6"
         android:background="@color/ctrlbackground"
+        android:gravity="center"
+        android:text=""
         android:textColor="@color/textColor"
         android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="10"
-        android:text="@string/rules_game_content"
-        android:background="@color/ctrlbackground"
-        android:textColor="@color/textColor"
-        android:textSize="20sp" />
-
+   
     <Button
-        android:id="@+id/btn_return_main_menu"
+        android:id="@+id/btn_seeWord"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="@string/see_word"
         android:background="@drawable/selector"
         android:gravity="center"
-        android:text="@string/return_main_menu"
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
+    
+    <Button
+        android:id="@+id/btn_space2"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="0.7"
+        android:background="@color/ctrlbackground"
+        android:gravity="center"
+        android:text=""
         android:textColor="@color/textColor"
         android:textSize="30sp" />
 

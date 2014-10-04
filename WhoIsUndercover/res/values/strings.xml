@@ -14,7 +14,13 @@
     <string name="btn_plus"> &gt; </string>
     <string name="player_num">游戏人数</string>
     <string name="word_type">词语类别 </string>
-    <string name="default_player_num">5</string>
-    <string name="default_word_type">随机</string>
+    <string name="default_player_num">7</string>
+    <string name="default_word_type">不限</string>
+    <string name="tip_playerNum_less">游戏人数太少!</string>
+    <string name="tip_playerNum_large">游戏人数太多!</string>
+    <string name="see_word">查看词语</string>
+    <string name="complete">我记住了</string>
+    <string name="pass_to">传递给</string>
+    <string name="num_player">号玩家</string>
 
 </resources>
