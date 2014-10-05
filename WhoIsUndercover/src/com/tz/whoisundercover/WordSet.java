@@ -44,4 +44,8 @@ public class WordSet {
 		return wordType.get(index);
 	}
 
+	public String[] getWordPair(String type){
+		String[] tmp = new String[]{"ÌÆÉ®", "·¨º£"}; 
+		return tmp;
+	}
 }
