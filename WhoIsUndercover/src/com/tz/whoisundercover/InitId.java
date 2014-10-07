@@ -53,6 +53,8 @@ public class InitId extends Activity{
 	
 	private void startDescription(){
 		Intent intent = new Intent(this, Description.class);
+		intent.putExtra("playerNum", playerNum);
+		intent.putExtra("indexWoDi", indexWoDi);
 		startActivity(intent);
 		finish();
 	}
