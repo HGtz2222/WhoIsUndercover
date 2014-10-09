@@ -4,25 +4,25 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tv_playerName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0sp"
         android:layout_weight="1"
         android:background="@color/ctrlbackground"
         android:gravity="center"
         android:text="@string/please_vote"
         android:textColor="@color/textColor"
         android:textSize="30sp" />
+
     <ListView
         android:id="@+id/playerList"
         android:layout_width="match_parent"
-        android:scrollbars="vertical"
-        android:textColor="@color/textColor"
         android:layout_height="0dp"
         android:layout_weight="6"
         android:background="@color/ctrlbackground"
         android:gravity="center"
-        android:textSize="30sp" 
-        />
+        android:scrollbars="vertical"
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
 
 </LinearLayout>

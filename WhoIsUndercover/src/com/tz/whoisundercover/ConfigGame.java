@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -38,6 +39,12 @@ public class ConfigGame extends Activity{
 		tv_wordType.setText(str);
 	}
 	
+	private void messageBox(String msg){
+		Toast t = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
+		t.setGravity(Gravity.CENTER, 0, 0);
+		t.show();
+	}
+	
 	private void initUI(){
 		tv_playerNum = (TextView)findViewById(R.id.textView_playerNum);
 		btn_playerNumPrev = (Button)findViewById(R.id.btn_playerNumPrev);
@@ -56,7 +63,7 @@ public class ConfigGame extends Activity{
 				int num = getPlayerNum();
 				if (num <= 4){
 					String tip = getResources().getString(R.string.tip_playerNum_less);
-					Toast.makeText(ConfigGame.this, tip, Toast.LENGTH_SHORT).show();
+					messageBox(tip);
 					return ; 
 				}
 				-- num;
@@ -72,7 +79,7 @@ public class ConfigGame extends Activity{
 				int num = getPlayerNum();
 				if (num >= 20){
 					String tip = getResources().getString(R.string.tip_playerNum_large);
-					Toast.makeText(ConfigGame.this, tip, Toast.LENGTH_SHORT).show();
+					messageBox(tip);
 					return ; 
 				}
 				++ num;

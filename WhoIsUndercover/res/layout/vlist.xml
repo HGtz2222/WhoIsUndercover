@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/tv_playerName"
+        android:layout_width="0sp"
+        android:layout_height="@dimen/player_list_item_height"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_voteCnt"
+        android:layout_width="0sp"
+        android:layout_height="@dimen/player_list_item_height"
+        android:layout_weight="0.5"
+        android:gravity="right"
+        android:textColor="@color/textColor"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_piao"
+        android:layout_width="0sp"
+        android:layout_height="@dimen/player_list_item_height"
+        android:layout_weight="0.5"
+        android:text="@string/piao"
+        android:gravity="left"
+        android:textColor="@color/textColor"
+        android:textSize="20sp" />
+
+</LinearLayout>
