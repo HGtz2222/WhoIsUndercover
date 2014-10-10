@@ -36,8 +36,12 @@ public class PlayerVoteInfo {
 	public int getVoteCnt(int playerIndex){
 		int arrIndex = playerIndex - 1;
 		HashMap<String, Object> map = (HashMap<String, Object>)data.get(arrIndex);
-		Integer cnt = (Integer)map.get("voteCnt");
-		return cnt.intValue();
+		Object obj = map.get("voteCnt");
+		if (obj instanceof Integer){
+			Integer cnt = (Integer)obj;
+			return cnt.intValue();
+		}
+		return 0;
 	}
 	
 	private void setVoteCnt(int playerIndex, int cnt){
@@ -47,6 +51,9 @@ public class PlayerVoteInfo {
 	}
 
 	public void addVote(int playerIndex) {
+		if (checkDied(playerIndex)){
+			return ; 
+		}
 		int cnt = getVoteCnt(playerIndex);
 		++cnt;
 		setVoteCnt(playerIndex, cnt);
@@ -85,6 +92,9 @@ public class PlayerVoteInfo {
 		int maxVoteIndex = 0;
 		// 找到得票数最多的童鞋; 
 		for (int playerIndex = 1; playerIndex <= playerNum; ++playerIndex){
+			if (checkDied(playerIndex)){
+				continue;
+			}
 			int curVoteCnt = getVoteCnt(playerIndex);
 			if (curVoteCnt > maxVoteCnt){
 				maxVoteCnt = curVoteCnt;
@@ -94,13 +104,16 @@ public class PlayerVoteInfo {
 		// 判定是否存在平局; 
 		int maxCnt = 0;
 		for (int playerIndex = 1; playerIndex <= playerNum; ++playerIndex){
+			if (checkDied(playerIndex)){
+				continue;
+			}
 			int curVoteCnt = getVoteCnt(playerIndex);
 			if (curVoteCnt == maxVoteCnt){
 				++maxCnt;
 			}
 		}
 		if (maxCnt > 1){
-			return -2;
+			return -1;
 		}
 		return maxVoteIndex;
 	}

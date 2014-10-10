@@ -56,18 +56,21 @@ public class Description extends Activity{
 		return -1;
 	}
 
-	private void killPlayer(int playerIndex){
+	private int killPlayer(int playerIndex){
 		Log.e("tz", "KillPlayer " + playerIndex);
 		if (playerIndex == indexWoDi){
-			// TODO 卧底阵亡, 该轮游戏结束;
-			gameOver();
+			// 卧底阵亡; 
+			return 1;
 		}else{
 			// 平民阵亡; 
 			killPerson(playerIndex);
 			if (checkWoDiWin()){
-				clearAllVote();
+				// 卧底获胜; 
+				return 2;
 			}else{
-				gameOver();
+				// 胜负未分, 下轮投票; 
+				clearAllVote();
+				return 0;
 			}
 		}
 	}
@@ -81,6 +84,7 @@ public class Description extends Activity{
 		playerInfo.kill(playerIndex);
 		// 2. 总玩家数 - 1;
 		voteMgr.kill();
+		refreshTitle();
 	}
 	
 	private void clearAllVote(){
@@ -135,16 +139,38 @@ public class Description extends Activity{
 				if (diedPlayerIndex == -2){
 					// 平局! 重新投票; 
 					clearAllVote();
+					ResultMsg.draw(Description.this);
 					return ; 
 				}
 				if (diedPlayerIndex == -1){
 					// 本轮投票尚未结束
 					return ; 
 				}
-				// 5. 杀死玩家;
-				killPlayer(playerIndex);
-				// 6. 插入死亡玩家到列表中; 
-				diedPlayerList.add(Integer.valueOf(playerIndex));
+				// 5. 杀死玩家; 
+				int rt = killPlayer(diedPlayerIndex);
+				// 6. 处理玩家死亡之后的善后; 
+				dealDiedPlayer(diedPlayerIndex, rt);
+			}
+			
+			private void dealDiedPlayer(int playerIndex, int rt) {
+				if (rt == 0){
+					// 平民死亡, 胜负未分, 将死亡玩家加入死亡列表; 
+					diedPlayerList.add(Integer.valueOf(playerIndex));
+					ResultMsg.diedPingMin(Description.this, playerIndex);
+					return ; 
+				}
+				if (rt == 1){
+					// 卧底阵亡; 
+					diedPlayerList.clear();
+					ResultMsg.winPingMin(Description.this, playerIndex);
+					return ;
+				}
+				if (rt == 2){
+					// 平民阵亡, 卧底获胜;
+					diedPlayerList.clear();
+					ResultMsg.winWoDi(Description.this, indexWoDi);
+					return ;
+				}
 			}
 			
 		});

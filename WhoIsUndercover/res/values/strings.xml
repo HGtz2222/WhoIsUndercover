@@ -24,5 +24,11 @@
     <string name="num_player">号玩家</string>
     <string name="please_vote">选出卧底</string>
     <string name="piao">票</string>
+    <string name="vote_draw">本轮投票平局, 无人阵亡</string>
+    <string name="died_pingmin">号玩家含冤而死!</string>
+    <string name="win_pingmin">号玩家是卧底, 平民胜利!</string>
+    <string name="win_wodi">号玩家是卧底, 卧底胜利!</string>
+    <string name="result_msg_title"/>
+    <string name="sure">确定</string>
 
 </resources>
