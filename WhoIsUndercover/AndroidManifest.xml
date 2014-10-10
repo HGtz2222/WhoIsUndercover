@@ -12,20 +12,30 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+         >
         <activity
             android:name="com.tz.whoisundercover.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.tz.whoisundercover.RulesGame"></activity>
-        <activity android:name="com.tz.whoisundercover.ConfigGame"></activity>
-        <activity android:name="com.tz.whoisundercover.InitId"></activity>
-        <activity android:name="com.tz.whoisundercover.Description"></activity>
+        <activity 
+            android:name="com.tz.whoisundercover.RulesGame"
+            android:screenOrientation="portrait"></activity>
+        <activity 
+            android:name="com.tz.whoisundercover.ConfigGame"
+            android:screenOrientation="portrait"></activity>
+        <activity 
+            android:name="com.tz.whoisundercover.InitId"
+            android:screenOrientation="portrait"></activity>
+        <activity 
+            android:name="com.tz.whoisundercover.Description"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

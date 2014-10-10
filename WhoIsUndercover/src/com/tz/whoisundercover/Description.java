@@ -23,6 +23,8 @@ public class Description extends Activity{
 	private Title voteMgr;
 	private PlayerVoteInfo playerInfo;
 	private SimpleAdapter sa;
+	private String wordWoDi;
+	private String wordPingMin;
 	
 	private void refreshTitle(){
 		tv_title.setText(voteMgr.toString());
@@ -94,8 +96,9 @@ public class Description extends Activity{
 		refreshTitle();
 	}
 
-	private void gameOver() {
+	public void gameOver() {
 		Log.e("tz", "Game Over");
+		finish();
 	}
 
 	private void initUI(){
@@ -108,6 +111,8 @@ public class Description extends Activity{
 		// 1. 获取玩家信息数据; 
 		indexWoDi = intent.getIntExtra("indexWoDi", 1);
 		int playerNum = intent.getIntExtra("playerNum", 7);
+		wordWoDi = intent.getStringExtra("wordWoDi");
+		wordPingMin = intent.getStringExtra("wordPingMin");
 		// 2. 依据玩家数据构造列表框; 
 		playerInfo = new PlayerVoteInfo(playerNum);
 		sa = new SimpleAdapter(this, playerInfo.getData(), R.layout.vlist, 
@@ -126,6 +131,7 @@ public class Description extends Activity{
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View view, int pos,
 					long id) {
+				Ring.ring(Description.this);
 				int playerIndex = (int)id + 1;
 				// 1. 先判定是否当前玩家已经阵亡; 
 				if (diedPlayerList.indexOf(playerIndex) != -1){
@@ -162,13 +168,13 @@ public class Description extends Activity{
 				if (rt == 1){
 					// 卧底阵亡; 
 					diedPlayerList.clear();
-					ResultMsg.winPingMin(Description.this, playerIndex);
+					ResultMsg.winPingMin(Description.this, playerIndex, wordWoDi, wordPingMin);
 					return ;
 				}
 				if (rt == 2){
 					// 平民阵亡, 卧底获胜;
 					diedPlayerList.clear();
-					ResultMsg.winWoDi(Description.this, indexWoDi);
+					ResultMsg.winWoDi(Description.this, indexWoDi, wordWoDi, wordPingMin);
 					return ;
 				}
 			}

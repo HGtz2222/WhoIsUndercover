@@ -62,7 +62,7 @@ public class PlayerVoteInfo {
 	public void kill(int playerIndex) {
 		// 将该行玩家修改为阵亡状态; 
 		HashMap<String, Object> map = getMap(playerIndex);
-		map.put("playerName", "平民阵亡");
+		map.put("playerName", "平民冤死");
 		map.put("piao", "");
 		map.put("voteCnt", "");
 	}

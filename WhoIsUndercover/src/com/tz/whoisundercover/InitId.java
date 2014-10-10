@@ -55,6 +55,8 @@ public class InitId extends Activity{
 		Intent intent = new Intent(this, Description.class);
 		intent.putExtra("playerNum", playerNum);
 		intent.putExtra("indexWoDi", indexWoDi);
+		intent.putExtra("wordPingMin", word[0]);
+		intent.putExtra("wordWoDi", word[1]);
 		startActivity(intent);
 		finish();
 	}

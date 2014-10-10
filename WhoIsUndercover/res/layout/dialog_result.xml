@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_dialog_draw"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="6"
+        android:background="@color/background"
+        android:gravity="center"
+        android:text="@string/vote_draw"
+        android:textColor="@color/textColor"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_draw"
+        android:layout_width="fill_parent"
+        android:layout_height="0sp"
+        android:text="@string/sure"
+        android:background="@drawable/selector"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_weight="2" />
+    <Button
+        android:id="@+id/btn_space2"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="0.7"
+        android:background="@color/ctrlbackground"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
+
+</LinearLayout>
