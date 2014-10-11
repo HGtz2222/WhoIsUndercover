@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import android.content.Context;
-import android.util.Log;
 
 public class PlayerVoteInfo {
 	private List<Map<String, Object>> data;

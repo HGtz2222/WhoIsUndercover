@@ -8,7 +8,7 @@
     <string name="start_game">开始游戏</string>
     <string name="rules">查看规则</string>
     <string name="rules_game_title">游戏规则</string>
-    <string name="rules_game_content">游戏规则如下: \n1. 1个卧底, N个平民; \n2. 轮流查看自己的词语, 其中有一个词语和其他不同, 作为卧底; \n3. 轮流用一句话描述自己的词语(不能包含词语); \n4. 轮流投票, 选出卧底, 得票最多的出局; \n5. 卧底死亡, 平民胜利; 最终剩下两个玩家(包含卧底), 卧底胜利; </string>
+    <string name="rules_game_content">游戏规则如下: \n1) 1个卧底, N个平民; \n2) 轮流查看自己的词语, 其中有一个词语和其他不同, 作为卧底; \n3) 轮流用一句话描述自己的词语(不能包含词语); \n4) 轮流投票, 选出卧底, 得票最多的出局; \n5) 卧底死亡, 平民胜利; 最终剩下两个玩家(包含卧底), 卧底胜利; </string>
     <string name="return_main_menu">返回</string>
     <string name="btn_minus"> &lt; </string>
     <string name="btn_plus"> &gt; </string>
@@ -26,8 +26,8 @@
     <string name="piao">票</string>
     <string name="vote_draw">本轮投票平局!</string>
     <string name="died_pingmin">号玩家含冤而死!</string>
-    <string name="win_pingmin">号玩家是卧底\n</string>
-    <string name="win_wodi">号玩家是卧底\n</string>
+    <string name="win_pingmin">号玩家是卧底\n\n</string>
+    <string name="win_wodi">号玩家是卧底\n\n</string>
     <string name="result_msg_title">提示</string>
     <string name="sure">确定</string>
     <string name="result_pingmin_win_title">平民获胜!</string>

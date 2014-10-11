@@ -2,8 +2,8 @@
     <resources>
         <string-array name="word_type">
             <item >不限</item>
-            <item >类别1</item>
-            <item >类别2</item>
-            <item >类别3</item>
+            <item >人物</item>
+            <item >能吃</item>
+            <item >东西</item>
         </string-array>
     </resources>
