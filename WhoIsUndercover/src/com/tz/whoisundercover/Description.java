@@ -2,12 +2,19 @@ package com.tz.whoisundercover;
 
 import java.util.ArrayList;
 
+import net.youmi.android.banner.AdSize;
+import net.youmi.android.banner.AdView;
+import net.youmi.android.banner.AdViewListener;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -21,6 +28,7 @@ public class Description extends Activity{
 	private SimpleAdapter sa;
 	private String wordWoDi;
 	private String wordPingMin;
+	private MenuButton menuBtn;
 	
 	private void refreshTitle(){
 		tv_title.setText(voteMgr.toString());
@@ -100,6 +108,7 @@ public class Description extends Activity{
 	private void initUI(){
 		playerList = (ListView)findViewById(R.id.playerList);
 		tv_title = (TextView)findViewById(R.id.tv_playerName);
+		menuBtn = (MenuButton)findViewById(R.id.btn_menu);
 	}
 	
 	private void initPlayers(){
@@ -175,7 +184,46 @@ public class Description extends Activity{
 				}
 			}
 		});
+		
+		menuBtn.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				openOptionsMenu();
+			}
+		});
 	}
+	
+	private void initAdBar(){
+		// 实例化广告条
+		AdView adView = new AdView(this, AdSize.FIT_SCREEN);
+		// 获取要嵌入广告条的布局
+		LinearLayout adLayout=(LinearLayout)findViewById(R.id.adLayout);
+		// 将广告条加入到布局中
+		adLayout.addView(adView);
+		
+		adView.setAdListener(new AdViewListener() {
+
+		    @Override
+		    public void onSwitchedAd(AdView adView) {
+		        // 切换广告并展示
+		    	Log.e("tz", "切换广告");
+		    }
+
+		    @Override
+		    public void onReceivedAd(AdView adView) {
+		        // 请求广告成功
+		    	Log.e("tz", "请求广告成功");
+		    }
+
+		    @Override
+		    public void onFailedToReceivedAd(AdView adView) {
+		        // 请求广告失败
+		    	Log.e("tz", "请求广告失败");
+		    }
+		});
+
+	}
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -184,5 +232,31 @@ public class Description extends Activity{
 		initUI();
 		initPlayers();
 		initListener();
+		initAdBar();
 	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		menu.add(Menu.NONE, Menu.FIRST + 1, 1, getResources().getString(R.string.clear_vote));
+		menu.add(Menu.NONE, Menu.FIRST + 2, 2, getResources().getString(R.string.restart));
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		int id = item.getItemId();
+		if (id == Menu.FIRST + 1){
+			clearAllVote();
+		}
+		if (id == Menu.FIRST + 2){
+			ResultMsg.exit(Description.this);
+		}
+		return true;
+	}
+
+	@Override
+	public void onBackPressed() {
+		ResultMsg.exit(Description.this);
+	}
+
 }

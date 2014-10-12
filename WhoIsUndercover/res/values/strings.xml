@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">谁是卧底</string>
+    <string name="app_name">揪出卧底</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="game_title">谁是卧底</string>
+    <string name="game_title">揪出卧底</string>
     <string name="start_game">开始游戏</string>
     <string name="rules">查看规则</string>
     <string name="rules_game_title">游戏规则</string>
@@ -39,5 +39,10 @@
     <string name="wodici">卧底:</string>
     <string name="pingminci">平民:</string>
     <string name="pingmin_died">冤枉啊~</string>
+    <string name="clear_vote">重新投票</string>
+    <string name="restart">重开一菊</string>
+    <string name="cancel">取消</string>
+    <string name="attention">提示</string>
+    <string name="restart_ask">重开一菊?</string>
 
 </resources>

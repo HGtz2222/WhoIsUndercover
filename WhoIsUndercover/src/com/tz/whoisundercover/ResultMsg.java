@@ -132,4 +132,29 @@ public class ResultMsg {
 		});
 		dialog.show();
 	}
+	
+	public static void exit(Context context){
+		final Dialog dialog = makeDialog(context, R.layout.dialog_exit);
+		final Activity a = (Activity)context;
+		// 1. 设置标题
+		String title = context.getResources().getString(R.string.attention);
+		dialog.setTitle(title);
+		// 2. 设置按钮
+		Button btnSure = (Button)dialog.findViewById(R.id.btn_sure_exit);
+		btnSure.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				dialog.dismiss();
+				a.finish();
+			}
+		});
+		Button btnCancel = (Button)dialog.findViewById(R.id.btn_cancel_exit);
+		btnCancel.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				dialog.dismiss();
+			}
+		});
+		dialog.show();
+	}
 }

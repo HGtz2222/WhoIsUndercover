@@ -1,5 +1,6 @@
 package com.tz.whoisundercover;
 
+import net.youmi.android.AdManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,8 +18,13 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         initUI();
+        initAd();
     }
 
+	private void initAd(){
+		AdManager.getInstance(this).init("195128cd9e70d210", "86ad3be86e654891", false);
+		//SpotManager.getInstance(this).loadSpotAds();// TODO 暂时关闭插屏广告; 
+	}
 
     private void initUI() {
     	btnStartGame = (Button)findViewById(R.id.btn_start_game);

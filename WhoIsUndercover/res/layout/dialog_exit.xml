@@ -1,0 +1,56 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/tv_dialog_exit_tip"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="6"
+        android:background="@color/background"
+        android:gravity="center"
+        android:text="@string/restart_ask"
+        android:textColor="@color/textColor"
+        android:textSize="20sp" />
+
+    <TableRow
+        android:id="@+id/unused2"
+        android:layout_width="fill_parent"
+        android:layout_height="0sp"
+        android:layout_weight="2" >
+
+        <Button
+            android:id="@+id/btn_sure_exit"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/textColor"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_cancel_exit"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/textColor"
+            android:textSize="20sp" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/btn_space2"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="0.7"
+        android:background="@color/ctrlbackground"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
+
+</TableLayout>

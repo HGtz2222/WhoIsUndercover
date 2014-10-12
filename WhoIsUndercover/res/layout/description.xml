@@ -3,16 +3,38 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/tv_playerName"
+    <LinearLayout
+        android:id="@+id/unused1"
         android:layout_width="match_parent"
         android:layout_height="0sp"
-        android:layout_weight="1"
-        android:background="@color/ctrlbackground"
-        android:gravity="center"
-        android:text="@string/please_vote"
-        android:textColor="@color/textColor"
-        android:textSize="30sp" />
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/background" />
+
+        <TextView
+            android:id="@+id/tv_playerName"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/ctrlbackground"
+            android:gravity="center"
+            android:text="@string/please_vote"
+            android:textColor="@color/textColor"
+            android:textSize="30sp" />
+
+        <com.tz.whoisundercover.MenuButton
+            android:id="@+id/btn_menu"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu" />
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/playerList"
@@ -25,4 +47,12 @@
         android:textColor="@color/textColor"
         android:textSize="30sp" />
 
+    <LinearLayout
+	    android:id="@+id/adLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_horizontal"
+	    android:orientation="vertical">
+	</LinearLayout>
+    
 </LinearLayout>
